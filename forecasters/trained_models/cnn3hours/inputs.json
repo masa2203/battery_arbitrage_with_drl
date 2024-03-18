@@ -1,0 +1,37 @@
+{
+  "MODEL": "CNN",
+  "EXP_PARAMS": {
+    "n_runs": 2,
+    "seed": 42,
+    "HOURS_AHEAD": 3,
+    "LOSS_FUNCTION": "RMSE",
+    "EVAL_LOSS_FUNCTIONS": ["MAE", "RMSE", "MedianAE"]
+  },
+  "HYPERPARAMETERS": {
+    "OPTUNA_VALUE": 97.569091796875,
+    "BATCH_SIZE": 16,
+    "EARLY_STOPPING_THRESHOLD": 22,
+    "LEARNING_RATE": 0.0002661592228569,
+    "LR_DECAY_FACTOR": 0.2234338333576757,
+    "LR_PATIENCE": 16,
+    "Min_LR": 9.078094372123148e-08,
+    "N_EPOCHS": 101,
+    "model_params": {
+      "window_size": 35,
+      "activation": "relu",
+      "ann_net_shape": [64, 64],
+      "cnn_kernel_size": 1,
+      "cnn_net_shape": [64, 64],
+      "cnn_stride": 1
+    },
+    "WINDOW_SIZE": 35,
+    "HOURS_AHEAD": 3,
+    "LOSS_FUNCTION": "RMSE",
+    "EVAL_LOSS_FUNCTIONS": ["MAE", "RMSE", "MedianAE"],
+    "Columns_to_scale": ["Actual Posted Pool Price", "Actual AIL"],
+    "Target_Column": "Actual Posted Pool Price",
+    "Features": ["Actual Posted Pool Price", "Actual AIL", "cos_h", "sin_h"],
+    "train_end": "2021-06-30",
+    "vali_end": "2021-12-31"
+  }
+}
